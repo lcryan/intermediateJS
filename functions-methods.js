@@ -10,7 +10,7 @@
 // getEmailDomain("a.wiersma@outlook.com") geeft outlook.com
 
 
-function getEmailDomain(emailadres){
+function getEmailDomain(emailadres) {
     const getIndexNumber = emailadres.indexOf("@");
     const domainName = emailadres.substring(getIndexNumber + 1);
     return domainName;
@@ -32,27 +32,30 @@ console.log(arjanMail);
 // typeOfEmail("novi.nlaapjesk@outlook.com") geeft geeft "Extern" <-- deze moet het ook doen!
 // typeOfEmail("a.wiersma@outlook.com") geeft "Extern"
 
-// 1. Funktion typeOfMail erwartet eine emailadresse
-// 2. const wir brauchen den "schwanz" von der ersten Aufgabe:
 
-function typeOfEmail(emailadres){
+function typeOfEmail(emailadres) {
     const getIndexNumber = emailadres.indexOf("@");
-    const domainName = emailadres.substring(getIndexNumber + 1);
-}
-if(domainName === "novi-education") {
-    console.log("Medewerker");
-}
-if(domainName === "novi") {
-    console.log("Student");
-}
-else if(domainName === "outlook") {
-    console.log("Extern");
-}
-const noviEd = getEmailDomain("n.eeken@novi-education.nl");
-const novi = getEmailDomain("t.mellink@novi.nl");
-const outlook = getEmailDomain("a.wiersma@outlook.com");
-console.log(noviEd);
+    const domain = emailadres.substring(getIndexNumber + 1);
 
+    if (domain === "novi-education.nl") {
+        return "Student"
+    } else if (domain === "novi.nl") {
+        return "Medewerker"
+    } else {
+        return "Extern"
+    }
+}
+
+const noviEd = typeOfEmail("n.eeken@novi-education.nl");
+const novi = typeOfEmail("t.mellink@novi.nl");
+const outlook = typeOfEmail("a.wiersma@outlook.com");
+const outlook2 = typeOfEmail("novi.nlaapjesk@outlook.com");
+
+
+console.log(noviEd);
+console.log(novi);
+console.log(outlook);
+console.log(outlook2);
 
 /* Opdracht  3 */
 // Schrijf een functie genaamd checkEmailValidity, die een emailadres verwacht en checkt of het emailadres valide is. De functie returned true of false, afhankelijk van de uitkomst.
@@ -67,3 +70,6 @@ console.log(noviEd);
 // checkEmailValidity("n.eeken@novinl.") geeft false - want de punt mag niet als laatst
 // checkEmailValidity("tessmellink@novi,nl") geeft false - want er staat een komma in
 
+function checkEmailValidity(emailadres) {
+
+}
