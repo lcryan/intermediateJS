@@ -12,8 +12,7 @@
 
 function getEmailDomain(emailadres) {
     const getIndexNumber = emailadres.indexOf("@");
-    const domainName = emailadres.substring(getIndexNumber + 1);
-    return domainName;
+    return emailadres.substring(getIndexNumber + 1);
 }
 
 const novaMail = getEmailDomain("n.eeken@novi-education.nl");
@@ -48,13 +47,13 @@ function typeOfEmail(emailadres) {
 
 const noviEd = typeOfEmail("n.eeken@novi-education.nl");
 const novi = typeOfEmail("t.mellink@novi.nl");
-const outlook = typeOfEmail("a.wiersma@outlook.com");
+const outlook1 = typeOfEmail("a.wiersma@outlook.com");
 const outlook2 = typeOfEmail("novi.nlaapjesk@outlook.com");
 
 
 console.log(noviEd);
 console.log(novi);
-console.log(outlook);
+console.log(outlook1);
 console.log(outlook2);
 
 /* Opdracht  3 */
@@ -70,6 +69,29 @@ console.log(outlook2);
 // checkEmailValidity("n.eeken@novinl.") geeft false - want de punt mag niet als laatst
 // checkEmailValidity("tessmellink@novi,nl") geeft false - want er staat een komma in
 
-function checkEmailValidity(emailadres) {
 
+function checkEmailValidity(emailadres) {
+    const at = emailadres.includes("@");
+    const comma = emailadres.includes(",");
+    const fullstop = emailadres.endsWith(".");
+
+
+    if (emailadres && at && !comma && !fullstop) {
+        return "true";
+    } else {
+        return "false";
+    }
 }
+
+const novaMail1 = checkEmailValidity("n.eeken@novi-education.nl");
+const tessaMail1 = checkEmailValidity("t.mellink@novi.nl");
+const tessaMail2 = checkEmailValidity("tessmellink@novi,nl");
+const novaMail2 = checkEmailValidity("n.eekenanovi.nl");
+const novaMail3 = checkEmailValidity("n.eeken@novinl.");
+
+
+console.log(novaMail1);
+console.log(tessaMail1);
+console.log(tessaMail2);
+console.log(novaMail2);
+console.log(novaMail3);
