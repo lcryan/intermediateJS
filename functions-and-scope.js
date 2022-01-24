@@ -35,18 +35,17 @@ function cumLaude(arrayGrades) {
     return cumLaudeStudents;
 }
 
-const getCumLaudeCert = cumLaude(grades);
+const getCumLaudeCertYear1 = cumLaude(grades);
 
-console.log(getCumLaudeCert);
+//Antwoord 1b.
+const getCumLaudeCertYear2 = cumLaude([6, 4, 5]);
+const getCumLaudeCertYear3 = cumLaude([8, 9, 4, 6, 10]);
+
+console.log(getCumLaudeCertYear1);
+console.log(getCumLaudeCertYear2);
+console.log(getCumLaudeCertYear3);
 
 // ---- Verwachte uitkomst: 6
-//1b antwoord :
-
-
-
-
-
-
 
 /*  1b: Omschrijven tot een herbruikbare functie   */
 // Schrijf een functie genaamd cumLaude, die een array van cijfers verwacht (zoals grades) en het aantal
@@ -60,18 +59,33 @@ console.log(getCumLaudeCert);
 // cumLaude([6, 4, 5]) geeft 0
 // cumLaude([8, 9, 4, 6, 10]) geeft 3
 
+//ZIE BOVEN!
 
 /* Opdracht  2: Gemiddeld cijfer */
 
 /* 2a: Script schrijven  */
-// De studenten-administratie moet ieder blok opnieuw berekenen wat het gemiddelde eindcijfer is, maar we beginnen met de grades array van hierboven.
+// De studenten-administratie moet ieder blok opnieuw berekenen wat het gemiddelde eindcijfer is,
+// maar we beginnen met de grades array van hierboven.
 // Schrijf de stapjes om dit te kunnen berekenen eerst uit en vraag jezelf de volgende dingen af:
 // * Hoe wordt een gemiddelde berekend?
 // * Wat moet ik verzamelen uit de array van cijfers om uiteindelijk een gemiddelde te kunnen berekenen?
 // * Hoe zorgt ik ervoor dat ik alle waardes uit de array kan langslopen, ook als de array wel 100 entries zou bevatten?
 // Log het antwoord in de terminal.
 //STAPPENPLAN
-//
+// 1. Schreibe eine Funktion averageGrade; die Funktion erwartet die Nummern im array.
+// 2. In die Funktion muss: ein forloop, um durch alle Nummern rechnen zu koennen (array.lentgh [i]),
+// 3. Das hier muss auch in die Funktion
+// welche methode muessen wir fuer das average berechnen??? => alle Nummern zusammen rechnen und dann
+//durch die Anzahl der Nummern rechnen. Beginnen mit let sum = 0;
+// Die Berechnung geht auch mit der Methode : Array. prototype. reduce()
+// 4.const reducer = (previousValue, currentValue) => previousValue + currentValue;
+
+
+
+let sum = 0;
+
+
+
 // ---- Verwachte uitkomst: 6.642857142857143
 
 
