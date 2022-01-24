@@ -24,6 +24,7 @@
 //2. Dan : if else : bei 8 >= wird diese dann eingespeichert.
 
 const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
+
 function cumLaude(arrayGrades) {
     let cumLaudeStudents = 0
 
@@ -71,28 +72,42 @@ console.log(getCumLaudeCertYear3);
 // * Wat moet ik verzamelen uit de array van cijfers om uiteindelijk een gemiddelde te kunnen berekenen?
 // * Hoe zorgt ik ervoor dat ik alle waardes uit de array kan langslopen, ook als de array wel 100 entries zou bevatten?
 // Log het antwoord in de terminal.
-//STAPPENPLAN
-// 1. Schreibe eine Funktion averageGrade; die Funktion erwartet die Nummern im array.
-// 2. In die Funktion muss: ein forloop, um durch alle Nummern rechnen zu koennen (array.lentgh [i]),
-// 3. Das hier muss auch in die Funktion
-// welche methode muessen wir fuer das average berechnen??? => alle Nummern zusammen rechnen und dann
-//durch die Anzahl der Nummern rechnen. Beginnen mit let sum = 0;
-// Die Berechnung geht auch mit der Methode : Array. prototype. reduce()
-// 4.const reducer = (previousValue, currentValue) => previousValue + currentValue;
 
 
-
+const grades2 = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 let sum = 0;
 
+for (let i = 0; i < grades2.length; i++) {
+    sum = sum + grades2[i];
+}
 
+console.log(sum / grades2.length);
 
 // ---- Verwachte uitkomst: 6.642857142857143
 
-
 /* 2b: Omschrijven tot een herbruikbare functie */
-// Schrijf een functie genaamd averageGrade, die een array van cijfers verwacht (zoals grades) en het gemiddelde cijfer teruggeeft. Gebruik hiervoor jouw antwoord van 2a.
-// Zorg ervoor dat jouw functie ook werkt als we een andere array willen checken, zoals bijvoorbeeld: [6, 4, 5] of [8, 9, 4, 6, 10].
+// Schrijf een functie genaamd averageGrade, die een array van cijfers verwacht (zoals grades) en
+// het gemiddelde cijfer teruggeeft. Gebruik hiervoor jouw antwoord van 2a.
+// Zorg ervoor dat jouw functie ook werkt als we een andere array willen checken,
+// zoals bijvoorbeeld: [6, 4, 5] of [8, 9, 4, 6, 10].
 // Log het antwoord in de terminal.
+
+function averageGrade(numbersInArray) {
+    let sum = 0;
+    for (let i = 0; i < numbersInArray.length; i++) {
+        sum = sum + numbersInArray[i];
+    }
+return sum / numbersInArray.length;
+}
+
+const averageGradeYear1 = averageGrade([9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6])
+const averageGradeYear2 = averageGrade([6, 4, 5]);
+const averageGradeYear3 = averageGrade([8, 9, 4, 6, 10]);
+
+console.log(averageGradeYear1);
+console.log(averageGradeYear2);
+console.log(averageGradeYear3);
+
 
 // ---- Verwachte uitkomsten:
 // averageGrade(grades) geeft 6.642857142857143
@@ -103,6 +118,9 @@ let sum = 0;
 /* 2c: Afronden op twee decimalen */
 // Zorg ervoor dat het gemiddelde cijfer dat wordt teruggegeven uit de functie netjes wordt afgerond op twee decimalen.
 // Tip: Google is your best friend!
+
+
+
 
 
 /* Bonusopdracht: hoogste cijfer */
