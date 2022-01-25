@@ -15,13 +15,13 @@ function getEmailDomain(emailadres) {
     return emailadres.substring(getIndexNumber + 1);
 }
 
-const novaMail = getEmailDomain("n.eeken@novi-education.nl");
-const tessMail = getEmailDomain("t.mellink@novi.nl");
-const arjanMail = getEmailDomain("a.wiersma@outlook.com");
+const domain1 = getEmailDomain("n.eeken@novi-education.nl");
+const domain2 = getEmailDomain("t.mellink@novi.nl");
+const domain3 = getEmailDomain("a.wiersma@outlook.com");
 
-console.log(novaMail);
-console.log(tessMail);
-console.log(arjanMail);
+console.log(domain1);
+console.log(domain2);
+console.log(domain3);
 
 /* Opdracht  2 */
 // Schrijf een functie genaamd typeOfEmail, die een emailadres verwacht. De functie checkt of het emailadres een novi domein heeft (medewerker), een novi-education domein (student), of extern domein (zoals gmail of outlook)
@@ -45,16 +45,16 @@ function typeOfEmail(emailadres) {
     }
 }
 
-const noviEd = typeOfEmail("n.eeken@novi-education.nl");
-const novi = typeOfEmail("t.mellink@novi.nl");
-const outlook1 = typeOfEmail("a.wiersma@outlook.com");
-const outlook2 = typeOfEmail("novi.nlaapjesk@outlook.com");
+const mail1 = typeOfEmail("n.eeken@novi-education.nl");
+const mail2 = typeOfEmail("t.mellink@novi.nl");
+const mail3 = typeOfEmail("a.wiersma@outlook.com");
+const mail4 = typeOfEmail("novi.nlaapjesk@outlook.com");
 
 
-console.log(noviEd);
-console.log(novi);
-console.log(outlook1);
-console.log(outlook2);
+console.log(mail1);
+console.log(mail2);
+console.log(mail3);
+console.log(mail4);
 
 /* Opdracht  3 */
 // Schrijf een functie genaamd checkEmailValidity, die een emailadres verwacht en checkt of het emailadres valide is. De functie returned true of false, afhankelijk van de uitkomst.
@@ -83,15 +83,15 @@ function checkEmailValidity(emailadres) {
     }
 }
 
-const novaMail1 = checkEmailValidity("n.eeken@novi-education.nl");
-const tessaMail1 = checkEmailValidity("t.mellink@novi.nl");
-const tessaMail2 = checkEmailValidity("tessmellink@novi,nl");
-const novaMail2 = checkEmailValidity("n.eekenanovi.nl");
-const novaMail3 = checkEmailValidity("n.eeken@novinl.");
+const toValidate1 = checkEmailValidity("n.eeken@novi-education.nl");
+const toValidate2 = checkEmailValidity("t.mellink@novi.nl");
+const toValidate3 = checkEmailValidity("tessmellink@novi,nl");
+const toValidate4 = checkEmailValidity("n.eekenanovi.nl");
+const toValidate5 = checkEmailValidity("n.eeken@novinl.");
 
 
-console.log(novaMail1);
-console.log(tessaMail1);
-console.log(tessaMail2);
-console.log(novaMail2);
-console.log(novaMail3);
+console.log(toValidate1);
+console.log(toValidate2);
+console.log(toValidate3);
+console.log(toValidate4);
+console.log(toValidate5);
