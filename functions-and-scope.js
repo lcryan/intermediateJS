@@ -121,13 +121,13 @@ console.log(averageGradeYear3);
 // Tip: Google is your best friend!
 
 
-const averageGradeYear12 = averageGrade([9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6])
+const averageGradeYear11 = averageGrade([9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6])
 const averageGradeYear22 = averageGrade([6, 4, 5]);
-const averageGradeYear32 = averageGrade([8, 9, 4, 6, 10]);
+const averageGradeYear33 = averageGrade([8, 9, 4, 6, 10]);
 
-console.log(Math.round(averageGradeYear12 * 100) / 100);
+console.log(Math.round(averageGradeYear11 * 100) / 100);
 console.log(Math.round(averageGradeYear22 * 100) / 100);
-console.log(Math.round(averageGradeYear32 * 100) / 100);
+console.log(Math.round(averageGradeYear33 * 100) / 100);
 
 
 /* Bonusopdracht: hoogste cijfer */
