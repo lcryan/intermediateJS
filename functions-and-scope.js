@@ -97,7 +97,7 @@ function averageGrade(numbersInArray) {
     for (let i = 0; i < numbersInArray.length; i++) {
         sum = sum + numbersInArray[i];
     }
-return sum / numbersInArray.length;
+    return sum / numbersInArray.length;
 }
 
 const averageGradeYear1 = averageGrade([9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6])
@@ -116,29 +116,77 @@ console.log(averageGradeYear3);
 
 
 /* 2c: Afronden op twee decimalen */
-// Zorg ervoor dat het gemiddelde cijfer dat wordt teruggegeven uit de functie netjes wordt afgerond op twee decimalen.
+// Zorg ervoor dat het gemiddelde cijfer dat wordt teruggegeven uit de functie netjes
+// wordt afgerond op twee decimalen.
 // Tip: Google is your best friend!
 
 
+const averageGradeYear12 = averageGrade([9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6])
+const averageGradeYear22 = averageGrade([6, 4, 5]);
+const averageGradeYear32 = averageGrade([8, 9, 4, 6, 10]);
 
+console.log(Math.round(averageGradeYear12 * 100) / 100);
+console.log(Math.round(averageGradeYear22 * 100) / 100);
+console.log(Math.round(averageGradeYear32 * 100) / 100);
 
 
 /* Bonusopdracht: hoogste cijfer */
 
 /* 3a: Script schrijven  */
-// Schrijf een script die op basis van de grades array (hierboven) checkt wat het hoogst behaalde cijfer is. Je mag hier geen bestaande methoden voor gebruiken. Schrijf de stapjes eerst uit en vraag jezelf de volgende dingen af:
+// Schrijf een script die op basis van de grades array (hierboven) checkt wat het hoogst behaalde cijfer is.
+// Je mag hier geen bestaande methoden voor gebruiken. Schrijf de stapjes eerst uit en vraag
+// jezelf de volgende dingen af:
 // * Hoe kan ik iedere waarde van de array langsgaan?
 // * Op welke conditie moet ik checken?
-// * Hoe zorgt ik ervoor dat wanneer ik een cijfer tegenkom die aan de conditie voldoet, ik dit ergens kan opslaan?
+// * Hoe zorgt ik ervoor dat wanneer ik een cijfer tegenkom die aan de conditie voldoet,
+// ik dit ergens kan opslaan?
 // Log het antwoord in de terminal.
+
+//1. Wir bauen einen forloop.
+//2. In die condition kommt die hoechste Zahl ist ??? Was brauchen wir hierfuer ?
+//3. if / else kleiner als
+//4. loggen
+
+
+let largestNumber = 0;
+const grades3 = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6]
+
+for (i = 0; i < grades3.length; i++) {
+
+    if (grades3[i] > largestNumber) {
+        largestNumber = grades3[i];
+    }
+}
+console.log(largestNumber);
 
 // ---- Verwachte uitkomst: 9
 
 
 /* 3b: Omschrijven tot een herbruikbare functie */
-// Schrijf een functie genaamd highestGrade, die een array van cijfers verwacht (zoals grades) en het hoogste cijfer teruggeeft. Gebruik hiervoor jouw antwoord van 3a.
-// Zorg ervoor dat jouw functie ook werkt als we een andere array willen checken, zoals bijvoorbeeld: [6, 4, 5] of [8, 9, 4, 6, 10].
+// Schrijf een functie genaamd highestGrade, die een array van cijfers verwacht
+// zoals grades) en het hoogste cijfer teruggeeft. Gebruik hiervoor jouw antwoord van 3a.
+// Zorg ervoor dat jouw functie ook werkt als we een andere array willen checken,
+// zoals bijvoorbeeld: [6, 4, 5] of [8, 9, 4, 6, 10].
 // Log het antwoord in de terminal.
+
+function highestGrade(numbersInArray) {
+    let largestNumber = 0;
+    for (i = 0; i < numbersInArray.length; i++) {
+
+        if (numbersInArray[i] > largestNumber) {
+            largestNumber = numbersInArray[i];
+        }
+    }
+    return largestNumber
+}
+
+const gradesYear1 = highestGrade([9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6]);
+const gradesYear2 = highestGrade([6, 4, 5]);
+const gradesYear3 = highestGrade([8, 9, 4, 6, 10]);
+
+console.log(gradesYear1);
+console.log(gradesYear2);
+console.log(gradesYear3);
 
 // ---- Verwachte uitkomsten:
 // highestGrade(grades) geeft 9
